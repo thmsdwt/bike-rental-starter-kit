@@ -1,0 +1,38 @@
+Database Schema:
+
+Split Citibike data in 2 databases:
+- station related
+- trip related
+- user related
+
+Weather data becomes 1 database
+
+Databases
+citibike_stations,
+    'start_station_id', PK
+    'start_station_name',
+    'end_station_name',
+    'end_station_id',
+
+'bike_id',
+'user_type',
+'birth_year',
+'gender',
+
+citibike_trip
+    'trip_duration',
+    'start_date', PK
+    'start_time', PK
+    'stop_date',
+    'stop_time'
+    'start_station_id', FK
+    'end_station_id',
+    'bike_id',
+
+citibike_user
+'bike_id',
+'user_type',
+'birth_year',
+'gender',
+
+weather_data, PK: 'date'
